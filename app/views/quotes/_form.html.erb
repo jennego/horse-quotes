@@ -1,0 +1,17 @@
+<%= simple_form_for @quote do |f|  %>
+
+<%= f.input :quotetext %>
+
+
+<%= f.fields_for :author do |a| %>
+    <%= a.input :author_first %>
+    <%= a.input :author_last %>
+<% end %>
+
+<%= f.fields_for :categories do |c| %>
+    <%= c.input :category %>
+<% end %>
+
+<%= f.submit %>
+
+<% end %>
