@@ -1,1 +1,7 @@
 <h1> Index Page! </h1>
+
+<% @quotes.each do |quote| %>
+    <%= link_to(quote_path(quote)) do  %>
+    <%= quote.quotetext %>
+    <% end %>
+<% end %>
