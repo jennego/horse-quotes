@@ -6,6 +6,16 @@ Future API for horse quotes
 *********
 
 
+To do
+- add taggings (many to many)
+- style pages - backgrounds, quotes, slides 
+- add users (two roles, contrib and fav only)
+- add search, sorting 
+- create basic show/recent/taggings api 
+- create random quote feature
+- add random quote to api 
+
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
