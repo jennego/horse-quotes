@@ -14,6 +14,15 @@ To do
 - create basic show/recent/taggings api 
 - create random quote feature
 - add random quote to api 
+- api docs
+
+advanced features
+- save as image, customize
+- random images per category 
+- can also assign images to quotes (overrides random)
+- allow submission of images 
+- share image to facebook, instagram, pin and others
+
 
 
 This README would normally document whatever steps are necessary to get the
