@@ -17,6 +17,7 @@ To do
 - api docs
 
 advanced features
+- slides (might need to be get it out of erb)
 - save as image, customize
 - random images per category 
 - can also assign images to quotes (overrides random)
