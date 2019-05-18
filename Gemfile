@@ -17,7 +17,7 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'mini_racer', platforms: :ruby
 
 gem 'simple_form'
-gem 'foundation-rails'
+gem 'foundation-rails' , ">= 6.2.3.0"
 gem 'autoprefixer-rails'
 
 # Use CoffeeScript for .coffee assets and views

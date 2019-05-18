@@ -13,5 +13,17 @@
  *= require_tree .
  *= require_self
  *= require foundation_and_overrides
-
  */
+
+ .main-menu {
+     background: rgba(255, 255, 255,0.5) 
+    }
+.main-menu a {
+    color:black;
+}
+
+.welcome {
+    text-align: center;
+}
+
+
