@@ -8,9 +8,7 @@
     <%= a.input :author_last %>
 <% end %>
 
-<%= f.fields_for :categories do |c| %>
-    <%= c.input :category %>
-<% end %>
+<%= f.association :categories, as: :text %>
 
 <%= f.submit %>
 

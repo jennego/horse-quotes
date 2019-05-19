@@ -7,7 +7,9 @@ Future API for horse quotes
 
 
 To do
-- add taggings (many to many)
+- make sure categories work properly
+- match author so if author is the same, uses same record - no dupes 
+- add select or auto complete + add new to categories - no dupes 
 - style pages - backgrounds, quotes, slides 
 - add users (two roles, contrib and fav only)
 - add search, sorting 

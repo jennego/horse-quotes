@@ -2,7 +2,6 @@ class QuotesController < ApplicationController
 
     def new
         @quote = Quote.new
-        @quote.categories.build
         @quote.build_author
     end
 
@@ -27,7 +26,7 @@ class QuotesController < ApplicationController
 
     def quote_params
  
-    params.require(:quote).permit(:quotetext, author_attributes: [:id, :author_first, :author_last], category_attributes: [:id, :category])
+    params.require(:quote).permit(:quotetext, author_attributes: [:id, :author_first, :author_last], {category_ids: []})
     
     end
 

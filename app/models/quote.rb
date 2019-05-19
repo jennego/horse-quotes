@@ -1,8 +1,10 @@
 class Quote < ApplicationRecord
-    has_many :categories 
     belongs_to :author 
+    has_many :categorizings, dependent: :destroy 
+    has_many :categories, through: :categorizings
 
-    accepts_nested_attributes_for :categories
     accepts_nested_attributes_for :author
+    accepts_nested_attributes_for :categorizings
+    accepts_nested_attributes_for :categories
 
 end

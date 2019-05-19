@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_15_050819) do
+ActiveRecord::Schema.define(version: 2019_05_19_045740) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,22 @@ ActiveRecord::Schema.define(version: 2019_05_15_050819) do
     t.index ["quote_id"], name: "index_categories_on_quote_id"
   end
 
+  create_table "categorizing", force: :cascade do |t|
+    t.bigint "quote_id"
+    t.bigint "category_id"
+    t.index ["category_id"], name: "index_categorizing_on_category_id"
+    t.index ["quote_id"], name: "index_categorizing_on_quote_id"
+  end
+
+  create_table "categorizings", force: :cascade do |t|
+    t.bigint "quote_id"
+    t.bigint "category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_categorizings_on_category_id"
+    t.index ["quote_id"], name: "index_categorizings_on_quote_id"
+  end
+
   create_table "quotes", force: :cascade do |t|
     t.text "quotetext"
     t.datetime "created_at", null: false
@@ -40,5 +56,9 @@ ActiveRecord::Schema.define(version: 2019_05_15_050819) do
   end
 
   add_foreign_key "categories", "quotes"
+  add_foreign_key "categorizing", "categories"
+  add_foreign_key "categorizing", "quotes"
+  add_foreign_key "categorizings", "categories"
+  add_foreign_key "categorizings", "quotes"
   add_foreign_key "quotes", "authors"
 end
