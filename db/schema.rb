@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_19_045740) do
+ActiveRecord::Schema.define(version: 2019_05_19_231347) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,27 +23,18 @@ ActiveRecord::Schema.define(version: 2019_05_19_045740) do
   end
 
   create_table "categories", force: :cascade do |t|
-    t.string "category"
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "quote_id"
-    t.index ["quote_id"], name: "index_categories_on_quote_id"
   end
 
-  create_table "categorizing", force: :cascade do |t|
-    t.bigint "quote_id"
+  create_table "multicategories", force: :cascade do |t|
     t.bigint "category_id"
-    t.index ["category_id"], name: "index_categorizing_on_category_id"
-    t.index ["quote_id"], name: "index_categorizing_on_quote_id"
-  end
-
-  create_table "categorizings", force: :cascade do |t|
     t.bigint "quote_id"
-    t.bigint "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["category_id"], name: "index_categorizings_on_category_id"
-    t.index ["quote_id"], name: "index_categorizings_on_quote_id"
+    t.index ["category_id"], name: "index_multicategories_on_category_id"
+    t.index ["quote_id"], name: "index_multicategories_on_quote_id"
   end
 
   create_table "quotes", force: :cascade do |t|
@@ -55,10 +46,7 @@ ActiveRecord::Schema.define(version: 2019_05_19_045740) do
     t.index ["author_id"], name: "index_quotes_on_author_id"
   end
 
-  add_foreign_key "categories", "quotes"
-  add_foreign_key "categorizing", "categories"
-  add_foreign_key "categorizing", "quotes"
-  add_foreign_key "categorizings", "categories"
-  add_foreign_key "categorizings", "quotes"
+  add_foreign_key "multicategories", "categories"
+  add_foreign_key "multicategories", "quotes"
   add_foreign_key "quotes", "authors"
 end
