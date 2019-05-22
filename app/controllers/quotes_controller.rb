@@ -26,7 +26,7 @@ class QuotesController < ApplicationController
 
     def quote_params
  
-    params.require(:quote).permit(:id, :quotetext, :category_ids => [], author_attributes: [:id, :author_first, :author_last])
+    params.require(:quote).permit(:id, :quotetext, :category_ids => [], :name => [], author_attributes: [:id, :author_first, :author_last])
     
     end
 

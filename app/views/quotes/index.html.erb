@@ -1,9 +1,18 @@
-<h1> Index Page! </h1>
 
-<p> A place for wonderful quotes about the fantastic beasts that are horses.</p>
+<div class="grid-container">
+<div class="grid-x align-center">
+    <div class="cell medium-9">
+        <h1> Index Page! </h1>
 
-<% @quotes.each do |quote| %>
-    <%= link_to(quote_path(quote)) do  %>
-    <%= quote.quotetext %>
-    <% end %>
-<% end %>
+        <p> A place for wonderful quotes about the fantastic beasts that are horses.</p>
+    <ul class="quote-list">
+        <% @quotes.each do |quote| %>
+            <%= link_to(quote_path(quote)) do  %>
+           <li> <%= quote.quotetext %> </li>
+            <% end %>
+        <% end %>
+        <h1> Horse Quotes </h1>
+        <%= link_to  "Quotes", quotes_path %>
+    </ul>
+    </div>
+</div>

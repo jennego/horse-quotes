@@ -6,6 +6,13 @@ class Quote < ApplicationRecord
     accepts_nested_attributes_for :author
     accepts_nested_attributes_for :categories
 
+    def next 
+        Quote.where("id > ?", id).limit(1).first
+    end
+
+    def prev
+        Quote.where("id < ?", id).limit(1).first
+    end
 
     def category_list
         categories.map(&:category).join(', ')
