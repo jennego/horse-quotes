@@ -3,7 +3,7 @@
 <div class="grid-x align-center">
     <div class="cell medium-9 welcome">
         <h1 class="main-quote"> <%= @quote.quotetext %> </h1>
-        - <%= @quote.author.author_first %> <%= @quote.author.author_last %>
+        - <%= @author %>
         <p> <%= link_to  "back to quotes", quotes_path %> </p>
         <p>
         <%= link_to "Prev Post", @quote.prev %> 

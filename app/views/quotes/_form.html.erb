@@ -2,11 +2,13 @@
 
 <%= f.input :quotetext %>
 
+<%= f.association :author, label_method: :full_name , value_method: :id, include_blank: true %>
 
 <%= f.fields_for :author do |a| %>
     <%= a.input :author_first %>
     <%= a.input :author_last %>
 <% end %>
+
 
 <%= f.association :categories, as: :select %>
 

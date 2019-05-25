@@ -16,6 +16,8 @@ gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
+gem "select2-rails"
+
 gem 'simple_form'
 gem 'foundation-rails' , ">= 6.2.3.0"
 gem 'autoprefixer-rails'

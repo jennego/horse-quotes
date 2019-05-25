@@ -12,7 +12,9 @@
 //
 //= require rails-ujs
 //= require activestorage
-//= //= require foundation
+//= require foundation
+//= require select2
+
 require_tree .
 
 $(function(){ $(document).foundation(); });
