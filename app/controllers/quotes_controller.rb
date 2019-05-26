@@ -7,6 +7,8 @@ class QuotesController < ApplicationController
 
     def create 
         @quote = Quote.new quote_params 
+         
+    
       if @quote.save
         redirect_to quote_path(@quote)
       else
@@ -20,14 +22,15 @@ class QuotesController < ApplicationController
 
     def show 
         @quote = Quote.find params[:id]
-                @author = @quote.author.author_first + ' ' + @quote.author.author_last 
     end
 
     private 
 
     def quote_params
+       params.require(:quote).permit!
+    
  
-    params.require(:quote).permit(:id, :quotetext, :author_id, :category_ids => [], :name => [], author_attributes: [:id, :author_first, :author_last])
+    # params.require(:quote).permit(:id, :quotetext, :author_id, :category_ids => [], :name => [], author_attributes: [:id, :author_first, :author_last])
     
     end
 

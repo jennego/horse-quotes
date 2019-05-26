@@ -5,6 +5,12 @@ Future API for horse quotes
 
 *********
 
+To do next
+- Ajax form submit
+- Submit select2 tagged 
+- Combine author name for now - new column
+
+
 
 To do
 - make sure categories work properly

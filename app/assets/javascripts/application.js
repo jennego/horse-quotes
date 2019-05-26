@@ -13,8 +13,26 @@
 //= require rails-ujs
 //= require activestorage
 //= require foundation
+//= require jquery
+//= require jquery_ujs
 //= require select2
+//= require_tree .
 
-require_tree .
+
+$(document).ready(function () {
+    
+    $(".author-select").select2(
+        { tags: true }
+    )
+
+    let auth_val = $('.author-select').on('select2:select', function (e) {
+        var data = e.params.data;
+        console.log(data.text)
+        return data.text
+    });
+
+
+    
+});
 
 $(function(){ $(document).foundation(); });
