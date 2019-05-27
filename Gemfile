@@ -22,6 +22,7 @@ gem 'simple_form'
 gem 'foundation-rails' , ">= 6.2.3.0"
 gem 'autoprefixer-rails'
 gem 'jquery-rails'
+gem "cocoon"
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'

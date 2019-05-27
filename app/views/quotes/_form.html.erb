@@ -4,8 +4,8 @@
 
 <%= f.association :author, label_method: :full_name , value_method: :id, include_blank: true, required: false,  input_html: {class:'author-select'} %>
 
-<%= text_field_tag (:author_input) %>
 
+<%= hidden_field_tag (:author_input) %>
  
 <%
 =begin%>

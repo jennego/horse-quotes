@@ -16,6 +16,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require select2
+//= require cocoon
 //= require_tree .
 
 
@@ -31,8 +32,27 @@ $(document).ready(function () {
         return data.text
     });
 
+    $(document).on("keypress", "select", function (e) {
+        if (e.which == 13) {
+            var inputVal = $(this).val();
+            alert("You've entered: " + inputVal);
+        }
+    });
 
     
+    // $(document).on("keypress", "input", function (e) {
+    //     if (e.which == 13) {
+    //         var inputVal = $(this).val();
+    //         alert("You've entered: " + inputVal);
+    //         $('input#author_input').val(auth_val)
+    //         console.log('enter is happening')
+    //         }
+    //     });
+
+        
 });
+
+
+    
 
 $(function(){ $(document).foundation(); });
