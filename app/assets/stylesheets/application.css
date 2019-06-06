@@ -27,4 +27,17 @@
     text-align: center;
 }
 
+.img-background {
+    background: url(https://source.unsplash.com/1600x900/?horses);
+    background-size: cover;
+}
+
+.main-quote {
+    background: rgba(255, 255, 255, 0.3);
+    display: inline;
+}
+
+h2.author {
+    font-size: 20px;
+}
 

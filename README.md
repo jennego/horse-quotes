@@ -3,10 +3,12 @@
 Website of horse quotes 
 Future API for horse quotes
 
+GO STRAIGHT TO REACT/SPA???
+
 *********
 
 To do next
-- Ajax form submit
+- Ajax form submit (or find or create by)
 - Submit select2 tagged 
 - Combine author name for now - new column
 
