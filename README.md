@@ -5,18 +5,17 @@ Future API for horse quotes
 
 GO STRAIGHT TO REACT/SPA???
 
+This project is using Ruby on Rails and Zurb Foundation 6. With plans for a react based spa. 
+
 *********
 
 To do next
-- Ajax form submit (or find or create by)
-- Submit select2 tagged 
-- Combine author name for now - new column
-
-
-
-To do
+- Ajax form submit (or find or create by) // get author to work both for new and existing 
+- Submit select2 tagged - new and existing 
 - make sure categories work properly
 - match author so if author is the same, uses same record - no dupes 
+
+To do 
 - add select or auto complete + add new to categories - no dupes 
 - style pages - backgrounds, quotes, slides 
 - add users (two roles, contrib and fav only)
