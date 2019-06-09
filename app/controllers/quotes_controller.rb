@@ -7,8 +7,8 @@ class QuotesController < ApplicationController
 
     def create 
         @quote = Quote.new quote_params 
-         
-    
+        @quote.author = Author.find_or_create_by(fullname: quote_params[:author_id]) if quote_params[:author_id].to_i == 0
+      
       if @quote.save
         redirect_to quote_path(@quote)
       else
