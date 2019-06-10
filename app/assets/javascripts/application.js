@@ -12,47 +12,34 @@
 //
 //= require rails-ujs
 //= require activestorage
-//= require foundation
 //= require jquery
 //= require jquery_ujs
+//= require foundation
 //= require select2
 //= require cocoon
 //= require_tree .
 
 
+$(function(){ $(document).foundation(); });;
+
 $(document).ready(function () {
     
     $(".author-select").select2(
-        { tags: true }
+        { tags: true, 
+        placeholder: "Select an author or create one by typing and pressing enter.",
+        selectOnClose: true}
     )
 
-    let auth_val = $('.author-select').on('select2:select', function (e) {
-        var data = e.params.data;
-        console.log(data.text)
-        return data.text
-    });
-
-    $(document).on("keypress", "select", function (e) {
-        if (e.which == 13) {
-            var inputVal = $(this).val();
-            alert("You've entered: " + inputVal);
+    $(".cat-select").select2(
+        {
+            tags: true,
+            selectOnClose: true
         }
-    });
+    )
 
-    
-    // $(document).on("keypress", "input", function (e) {
-    //     if (e.which == 13) {
-    //         var inputVal = $(this).val();
-    //         alert("You've entered: " + inputVal);
-    //         $('input#author_input').val(auth_val)
-    //         console.log('enter is happening')
-    //         }
-    //     });
 
         
 });
 
 
     
-
-$(function(){ $(document).foundation(); });
