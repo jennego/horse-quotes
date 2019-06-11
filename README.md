@@ -10,7 +10,6 @@ This project is using Ruby on Rails and Zurb Foundation 6. With plans for a reac
 *********
 
 To do next
-- Ajax form submit (or find or create by) // get author to work both for new and existing 
 - Submit select2 tagged - new and existing 
 - make sure categories work properly
 - match author so if author is the same, uses same record - no dupes 
@@ -33,6 +32,7 @@ advanced features
 - allow submission of images 
 - share image to facebook, instagram, pin and others
 
+*****************
 
 
 This README would normally document whatever steps are necessary to get the

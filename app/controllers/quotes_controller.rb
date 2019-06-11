@@ -8,11 +8,9 @@ class QuotesController < ApplicationController
     def create 
         @quote = Quote.new quote_params 
         @quote.author = Author.find_or_create_by(fullname: quote_params[:author_id]) if quote_params[:author_id].to_i == 0 
-      
+        category_params
     
-        # quote_params[:category_ids].each do |c|
-        #   Category.find_or_create_by(name: quote_params[c]) if quote_params[c].to_i == 0
-        # end
+      
 
         if @quote.save
         redirect_to quote_path(@quote)
@@ -46,10 +44,19 @@ class QuotesController < ApplicationController
       params.require(:quote).permit!
 
     
-    
  
     # params.require(:quote).permit(:id, :quotetext, :author_id, :category_ids => [], :name => [], author_attributes: [:id, :author_first, :author_last])
-    
-    end
 
+    
+  end
+  
+  def category_params
+      quote_params[:category_ids].each do |c|
+          if quote_params[c].to_i == 0
+          Category.find_or_create_by(name: quote_params[c]) 
+          puts c 
+          end
+        end 
+  end
+  
 end
