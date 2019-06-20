@@ -11,8 +11,7 @@ This project is using Ruby on Rails and Zurb Foundation 6. With plans for a reac
 
 To do next
 - Submit select2 tagged - new and existing 
-- make sure categories work properly
-- match author so if author is the same, uses same record - no dupes 
+- make sure categories work properly - may need to prepopulate it for now 
 
 To do 
 - add select or auto complete + add new to categories - no dupes 
