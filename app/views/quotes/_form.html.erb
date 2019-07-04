@@ -11,6 +11,8 @@
 
 <%= f.association :author, label_method: :full_name , value_method: :id, include_blank: true, required: false,  input_html: {class:'author-select'} %>
 
+<%= f.input :source %>
+
 <br>
 
 <%= f.association :categories, include_blank: false, include_hidden: false, required: false, input_html: {class:'cat-select'} %>
